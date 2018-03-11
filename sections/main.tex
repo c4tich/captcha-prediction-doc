@@ -1,0 +1,45 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\usepackage{microtype}
+\usepackage{showframe}
+\usepackage{times}
+\usepackage{graphicx}
+    \graphicspath{ {images/} }
+\usepackage{subfiles}
+\usepackage[style=numeric-comp,backend=biber]{biblatex}
+    \addbibresource{bibliography/biblio.bib}
+\usepackage{placeins}
+\usepackage{tikz,graphicx,circuitikz}
+	\usetikzlibrary{patterns,intersections}
+	\usetikzlibrary{babel}
+	\usetikzlibrary{shapes,arrows}
+	\usetikzlibrary{positioning}
+\usepackage{pgfplots, pgfplotstable}
+	\usepgfplotslibrary{statistics}
+	\usepgfplotslibrary{fillbetween}
+	\pgfplotsset{compat=newest}
+\usepackage{amsmath}
+    
+\usepackage[toc,page]{appendix}
+
+\title{Prediction of numbers based on captcha images using python}
+\author{Christian Fortich}
+\date{March 2018}
+
+\begin{document}
+
+\maketitle
+
+\subfile{introduction}
+\subfile{preprocessing}
+\subfile{dataprocessing}
+\subfile{tests}
+\begin{appendices}
+    \subfile{codeAppendix}
+    \subfile{toolsAppendix}
+\end{appendices}
+
+\printbibliography
+
+\end{document}
